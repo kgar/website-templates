@@ -1,0 +1,134 @@
+:root {
+  --header-height: 4.5rem;
+  --color-primary: #a30b37;
+  --color-primary-light: #f4618c;
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(
+    to bottom right,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.header__brand {
+  color: white;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.header__content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-toggle {
+  cursor: pointer;
+}
+
+.header__nav-toggle > i {
+  color: white;
+  font-size: 2em;
+}
+
+.nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  padding: 2rem;
+  background: #222;
+}
+
+#inpNavToggle:checked ~ .nav {
+  display: flex;
+}
+
+#inpNavToggle {
+  display: none;
+}
+
+.nav__link {
+  font-weight: 500;
+  padding: 16px 0;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav__link:hover {
+  opacity: 0.8;
+}
+
+/* Main Content */
+.main {
+  margin-top: var(--header-height);
+  padding: 1.875rem;
+  font-weight: 500;
+}
+
+.main__image-for-fun {
+  float: right;
+}
+
+@media screen and (min-width: 767px) {
+  .header__nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: initial;
+    position: static;
+    width: unset;
+    height: unset;
+    padding: unset;
+    background: transparent;
+    flex-direction: row;
+  }
+
+  .nav__link {
+    border-bottom: none;
+  }
+
+  .nav__link + .nav__link {
+    margin-left: 1.5rem;
+  }
+}
