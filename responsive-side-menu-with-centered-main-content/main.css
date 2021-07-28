@@ -1,0 +1,60 @@
+:root {
+  --header-height: 4.5rem;
+  --color-primary: #a30b37;
+  --color-primary-light: #f4618c;
+  box-sizing: border-box;
+  --main-section-content-max-width: 1000px;
+  --main-section-spacer-max-width: 25%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Side Menu and Content Layout */
+.side-menu-and-content {
+  display: flex;
+}
+
+.side-menu-and-content > aside {
+}
+
+.side-menu-and-content > main {
+  flex-grow: 1;
+}
+
+.main-section-margin {
+  max-width: var(--main-section-content-max-width);
+  margin: auto;
+  padding: 0 1em;
+}
+
+.main-section-container {
+  display: flex;
+}
+
+.main-section-content {
+  flex-basis: 0%;
+  flex-grow: 1;
+  max-width: 75%;
+}
+
+.main-section-spacer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 25%;
+  max-width: var(--main-section-spacer-max-width);
+}
+
+.main-section-content section > article + * {
+  padding-top: 1em;
+}
+
+/* Inner content layout (for demo flavor) */
