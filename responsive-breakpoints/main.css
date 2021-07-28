@@ -1,0 +1,117 @@
+:root {
+  --header-height: 4.5rem;
+  --color-primary: rebeccapurple;
+  box-sizing: border-box;
+  --main-section-content-max-width: 1000px;
+  --main-section-spacer-max-width: 25%;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+main article + * {
+  margin-top: 1em;
+}
+
+.container {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+header {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  height: 60px;
+  align-items: center;
+}
+
+.brand {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* the breakpoints in action (100% ripped from Bootstrap 5) */
+
+@media screen and (min-width: 576px) {
+  
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 768px;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 992px;
+  }
+
+  main article + * {
+    margin-top: unset;
+  }
+
+  .articles {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .articles > article {
+    flex: 1 0 0;
+    min-width: 20rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* The Block to Copy */
+/*
+@media screen and (min-width: 576px) {
+  
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 992px) {
+  
+}
+
+@media screen and (min-width: 1200px) {
+  
+}
+
+@media screen and (min-width: 1400px) {
+  
+}
+*/
